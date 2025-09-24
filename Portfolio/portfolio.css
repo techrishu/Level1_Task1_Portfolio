@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 500;
+}
+
+/* Layout */
+.portfolio-container {
+  min-height: 100vh;
+  display: flex;
+}
+
+.left-container,
+.right-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.left-container {
+  width: 70%;
+  background: darkgray;
+  padding-left: 3rem;
+}
+
+.right-container {
+  width: 30%;
+  background: darkgrey;
+}
+
+/* Navbar */
+.navlist {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 10vh;
+  z-index:1000;
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+  border-radius: 20px;
+  border: 2px solid gray;
+
+}
+
+.navlist li {
+  list-style: none;
+}
+
+.navlist a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: aliceblue;
+}
+
+/* Icons */
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.3rem;
+  list-style: none;
+  font-size: 1.6rem;
+}
+
+.icons li a {
+  text-decoration: none;
+  color: black;
+}
+
+.icons .fa-brands:hover {
+  font-size: 1.6rem;
+  cursor: pointer;
+  background: linear-gradient(#fff, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Content */
+.content {
+  margin-left: 4rem;
+}
+
+.content h2 {
+  font-size: 1.5rem;
+  color: #fff;
+  }
+
+.content h1 {
+  font-size: 3rem;
+  color: cyan;
+}
+
+span {
+  color: aquamarine;
+}
+
+/* Button */
+.btn button {
+  border: .1rem solid lightblue;
+  padding: .8rem 1.5rem;
+  background: transparent;
+  border-radius: 3rem;
+  color: whitesmoke;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background .5s ease, transform .3s ease;
+}
+.btn button a{
+  color : whitesmoke;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.btn button:hover {
+  background: linear-gradient(cyan, orange);
+  transform: scale(1.05);
+}
+
+/* Design Circles */
+.design .circle {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
+.circle:nth-child(1) {
+  background: linear-gradient(90deg, transparent 50%, 50%);
+  width: 38rem;
+}
+
+/* About Section */
+#about {
+  padding: 80px 10%;
+  background: darkgray;
+}
+
+.about-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.about-image img {
+  width: 250px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-details {
+  flex: 1;
+}
+
+.about-details h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: whitesmoke;
+}
+
+.about-details p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: black;
+}
+
+/* Info */
+.info {
+  margin-bottom: 5px;
+}
+
+.info h3 {
+  font-size: 1.5rem;
+  color: #007BFF;
+  margin-bottom: 5px;
+}
+
+.info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info li {
+  font-size: 1rem;
+  padding: 5px 0;
+  color: whitesmoke;
+}
+
+/* project section start here */
+/* Projects Section */
+#projects {
+  padding: 80px 10%;
+  background: darkgrey;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: whitesmoke;
+}
+
+/* Project Cards Layout */
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Card Style */
+.project-card {
+  background: darkgray;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform .3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Card Image */
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Card Info */
+.project-info {
+  padding: 20px;
+  text-align: left;
+}
+
+.project-info h3 {
+  font-size: 1.2rem;
+  color: cyan;
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  font-size: .95rem;
+  color: whitesmoke;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+/* Button inside Card */
+.project-info .btn {
+  display: inline-block;
+  padding: .6rem 1.2rem;
+  border-radius: 20px;
+  border: 1px solid cyan;
+  background: transparent;
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: .9rem;
+  transition: background .3s ease, transform .3s ease;
+}
+
+.project-info .btn:hover {
+  background: linear-gradient(cyan, orange);
+  transform: scale(1.05);
+}
+
+/* Contact Here code */
+.contact-us {
+  background-color: darkgray;
+  min-height: 550px;
+}
+
+.Contact {
+  max-width: 400px;
+  margin: 100px auto 50px ;
+  background:lightdark;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+h2 {
+  text-align: center;
+  color: cyan;
+}
+
+.info {
+  margin-bottom: 20px;
+}
+
+.info p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: aliceblue;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(45deg, #007bff, #00c6ff);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+form button:hover {
+  background: linear-gradient(45deg, cyan, orange);
+  transform: scale(1.05);
+}
+ footer {
+        text-align: center;
+        padding: 15px 0;
+        background-color: #007bff; 
+        color: white;
+        font-size: 14px;
+        position: relative; 
+        bottom: 0;
+        width: 100%;
+        margin-top: 0px; 
+    }
+
+    footer p {
+        margin: 0;
+    }
+
